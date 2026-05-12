@@ -1,0 +1,40 @@
+# ─────────────────────────────────────────────────────────
+# MikroTik Diagnostic Tool — Configuration
+# ─────────────────────────────────────────────────────────
+
+# List all your routers here
+routers:
+  - name: "Core-Router-01"
+    host: "10.20.230.4"
+    username: "yasir.arafat"
+    password: "*********"
+    port: 22
+
+  - name: "Edge-Router-02"
+    host: "10.20.250.232"
+    username: "yasir.arafat"
+    password: "*********"
+    port: 22
+
+  - name: "Distribution-03"
+    host: "10.20.250.176"
+    username: "yasir.arafat"
+    password: "*********"
+    port: 22
+
+# ─────────────────────────────────────────────────────────
+# Telegram Alerts (optional)
+# ─────────────────────────────────────────────────────────
+telegram:
+  enabled: true
+  bot_token: "YOUR_BOT_TOKEN_HERE"       # From @BotFather
+  chat_id: "YOUR_CHAT_OR_GROUP_ID"       # Use @userinfobot to get it
+
+# ─────────────────────────────────────────────────────────
+# Thresholds for alerts
+# ─────────────────────────────────────────────────────────
+thresholds:
+  cpu_warning: 60         # % CPU load for yellow alert
+  cpu_critical: 85        # % CPU load for red alert
+  memory_free_min: 20     # Minimum free memory % before alert
+  interface_error_max: 100 # Max interface errors before flagging
